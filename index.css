@@ -1,0 +1,71 @@
+main div{
+    background-color: rgb(255, 246, 235);
+    margin: 0;
+    padding: 0;
+    color: #050505;
+}
+
+/*ナビゲーションスタイリング　スタート*/
+nav{
+    text-align: center;
+}
+
+/*ブロックに対して*/
+nav ul{
+    margin: 2em;
+    padding: 0;
+    background: rgb(255, 148, 177);
+}
+
+/*ブロック内の行に対して*/
+nav ul li{
+    list-style-type: none;
+    display: inline-block; /*横並びにする*/
+    padding: 6.5px;
+	margin: 0 1em;
+    width: 18%; /*タイトルの間隔をきめる*/
+}
+
+/*行と行の要素を分けて指示する必要があるかは不明だがとりあえずわけて処理*/
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 246, 235);
+    font-size: 18px;
+    font-weight: 700;
+    transition: all .3s ease .1s;
+}
+
+/*マウスホバーで動作*/
+nav ul li a:hover{
+    color: #050505;
+    transition: .3s;
+}
+
+/*ナビゲーションスタイリング　おわり*/
+
+.title{
+    padding: 2px 0 0 0;
+    font-weight: bold;
+    color: rgb(255, 148, 177);
+}
+
+.title-all{
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    font-style: italic;
+    font-family: 'Times New Roman';
+}
+
+/*横に線を追加する*/
+hr{
+    margin-bottom: 2em;
+}
+
+.line-test{
+    background-color: rgb(255, 148, 177);
+    border: none;
+    height: 3px;
+}
+
+/*色がつかない、失敗してる*/

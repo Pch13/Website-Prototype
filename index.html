@@ -5,40 +5,24 @@
     <!--HTML呼び出し-->
     <!--文字列認識-->
     <meta charset="UTF-8">
-    <!--表示範囲指定--> 
+    <!--表示範囲指定  シェーダー表示範囲テストのため一時的に非表示
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    --> 
+
     <!--CSS呼び出し-->
     <!--リンクでファイル名指定して呼び出す-->
-    <link rel="stylesheet" href="PchWeb.css">
+    <link rel="stylesheet" href="index.css">
     
     <!--シェーダー呼び出し-->
-    <!--3Dライブラリをロード-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
-    integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
-    crossorigin="anonymous"
+    <!--glMatrix ライブラリ呼び出し-->
+    <script 
+    src="https://raw.githubusercontent.com/toji/gl-matrix/master/dist/gl-matrix.js"
+    integrity="anonymous"
     defer></script>
-    <script src="./PchWeb.js" type="module"></script>
+    
+    <!-- JS呼び出し-->
+     <script src="index.js" type="module"></script>
 
-    <!--シェーダー呼び出し 一時停止中-->
-    <!--craete vertex shader-->
-<!-- 
-    <script id="vertexShader" type="x-shader/x-vertex">
-        attribute vec3 position;
-        void main(void){
-            gl_Position=vec4(position, 1.0); //ここに頂点情報を渡す
-        }
-    </script>
--->
-    <!--craete fragment shader-->
-<!--
-    <script id="fragmentShader" type="x-shader/x-fragment">
-        precision mediump float;
-        void main(void){
-            gl_FragColor=vec4 (1.0, 1.0, 1.0, 1.0);  //ここに色情報を渡す
-        }
-    </script>
--->
     <title>Pch's first website</title>
 </head>    
 
@@ -56,7 +40,6 @@
         </nav>
     </header>
     <main>
-        <!--WebGL-->
         <canvas id="canvas" width="640" height="480"></canvas>
 
         <article id="home">
@@ -72,6 +55,7 @@
         <article id="blog">
             <div class="title">
             <h2>BLOG</h2>
+            <hr class="line-test">
             </div>
 
             <h4>タイトル</h4>
@@ -82,6 +66,7 @@
         <article id="about">
             <div class="title">
             <h2>ABOUT</h2>
+            <hr class="line-test">
             </div>
 
             <h4>見出し</h4>
