@@ -68,4 +68,30 @@ hr{
     height: 3px;
 }
 
-/*色がつかない、失敗してる*/
+.anim-obj{
+    background-color: #afafaf;
+    height: 25px;
+    width: 300px;
+    border-radius: 20px;
+    margin-left: auto;
+    padding: .3em;
+}
+
+.anim-obj{
+    animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideIn{
+0%{
+    transform: translateX(-50px);
+    opacity: 0; 
+}
+    100%{
+        transform: translateX(0);;
+    }
+    40%, 100%{
+        opacity: 1;
+    }
+
+}
+/*上の処理、ホバーとクリックで別ページ遷移追加したい*/
