@@ -1,4 +1,4 @@
-/*紐付けられてない*/
+/*紐付けられてない
 $ (function(){
    if($('.anim-box.slidein.is-animated').length){
     scrollAnimation();
@@ -19,3 +19,4 @@ $ (function(){
     }
     $(window).trigger('scroll');
 });
+*/

@@ -5,6 +5,14 @@ main div{
     color: #050505;
 }
 
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(255, 246, 235);
+}
+
 /*ナビゲーションスタイリング　スタート*/
 nav{
     text-align: center;
@@ -12,9 +20,10 @@ nav{
 
 /*ブロックに対して*/
 nav ul{
-    margin: 2em;
+    border-top: #050505 solid 2px;
+    border-bottom: #050505 solid 2px;
     padding: 0;
-    background: rgb(255, 148, 177);
+    margin: 0;
 }
 
 /*ブロック内の行に対して*/
@@ -22,14 +31,14 @@ nav ul li{
     list-style-type: none;
     display: inline-block; /*横並びにする*/
     padding: 6.5px;
-	margin: 0 1em;
+	margin: 1.2em;
     width: 18%; /*タイトルの間隔をきめる*/
 }
 
 /*行と行の要素を分けて指示する必要があるかは不明だがとりあえずわけて処理*/
 nav ul li a{
     text-decoration: none;
-    color: rgb(255, 246, 235);
+    color: #050505;
     font-size: 18px;
     font-weight: 700;
     transition: all .3s ease .1s;
@@ -37,16 +46,24 @@ nav ul li a{
 
 /*マウスホバーで動作*/
 nav ul li a:hover{
-    color: #050505;
+    color: rgb(255, 148, 177);
     transition: .3s;
 }
 
 /*ナビゲーションスタイリング　おわり*/
 
+ul li{
+    list-style-type: none;
+    margin: auto;
+    padding: 0px;
+    height: 45px;
+}
+
 .title{
+    border-bottom: rgb(255, 148, 177) solid 2px;
     padding: 2px 0 0 0;
     font-weight: bold;
-    color: rgb(255, 148, 177);
+    color: #050505;
 }
 
 .title-all{
@@ -62,36 +79,11 @@ hr{
     margin-bottom: 2em;
 }
 
-.line-test{
+footer{
     background-color: rgb(255, 148, 177);
-    border: none;
-    height: 3px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-weight: normal;
 }
-
-.anim-obj{
-    background-color: #afafaf;
-    height: 25px;
-    width: 300px;
-    border-radius: 20px;
-    margin-left: auto;
-    padding: .3em;
-}
-
-.anim-obj{
-    animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
-
-@keyframes slideIn{
-0%{
-    transform: translateX(-50px);
-    opacity: 0; 
-}
-    100%{
-        transform: translateX(0);;
-    }
-    40%, 100%{
-        opacity: 1;
-    }
-
-}
-/*上の処理、ホバーとクリックで別ページ遷移追加したい*/
