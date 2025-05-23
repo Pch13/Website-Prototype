@@ -5,12 +5,15 @@ main div{
     color: #050505;
 }
 
-header{
+.menu-fadeIn-border.fixed{
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    background: rgb(255, 246, 235);
+    left: auto;
+    z-index: +1;
+}
+.menu-fadeIn-border.fixed.none{
+    opacity: 1;
+    z-index: -1;
 }
 
 /*ナビゲーションスタイリング　スタート*/
@@ -22,8 +25,8 @@ nav{
 nav ul{
     border-top: #050505 solid 2px;
     border-bottom: #050505 solid 2px;
-    padding: 0;
-    margin: 0;
+    padding-top: 10em;
+    margin: auto;
 }
 
 /*ブロック内の行に対して*/
@@ -66,7 +69,13 @@ ul li{
     color: #050505;
 }
 
-.title-all{
+.top{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
     text-align: center;
     font-weight: bold;
     font-size: x-large;
@@ -80,7 +89,7 @@ hr{
 }
 
 footer{
-    background-color: rgb(255, 148, 177);
+    background-color: rgb(107, 107, 107);
     margin-top: 30px;
     margin-bottom: 20px;
     padding-top: 50px;
