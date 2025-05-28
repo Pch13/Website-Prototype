@@ -45,27 +45,36 @@ $(function(){
 });
 */
 
-//コンストラクター用意
-const element = document.getElementById('fadeIn');
+const onScroll = () => {
+    console.log("scroll");
+};
 
-//視差を生むように距離を開けておく
-const shiftDistance = 100;
-element.style.top = '${shiftDistance}px';
-
-//要素の初期の位置情報を取得
-const initialElementPosition = element.getBoundingClientRect().top;
-//スタート位置を計算
-const startScrollPosition = (initialElementPosition + window.scrollY) - window.innerHeight;
-//関数処理
-window.addEventListener('scroll', () => requestAnimationFrame(animateElement));
-
-function animateElement(){
-    if(window.scrollY > startScrollPosition){
-        element.style.top = '${Math.max(0, (shiftDistance - (window.scrollY - startScrollPosition) / 2))}px';
+window.addEventListener("scroll", () => {
+    onScroll();    
+    
+    if(pos > hH && pos > lastPos){
+        header.classList.add("header-unpinned");
     }
-}
+    if(pos < hH || pos < lastPos){
+        header.classList.remove("header-unpinned");
+    }
+    if(pos < hH || pos < lastPos || winBtm <= pos){
+        header.classList.remove("header-unpinned");
+    }
 
-if(window.scrollY === 0){
-    requestAnimationFrame(animateElement);
-}
+    lastPos = pos;
+});
 
+const header = document.getElementById("header");
+const hH = header.clientHeight;
+let pos = 0;
+let lastPos = 0;
+
+window.addEventListener("scroll", () => {
+    pos = window.scrollY;
+    onScroll();
+})
+
+const winH = window.innerHeight;
+const docH = window.documentElement.scrollHeight;
+const winBtm = docH - winH;

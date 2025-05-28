@@ -4,15 +4,31 @@ main div{
     padding: 0;
     color: #050505;
 }
-/*
-header{
-    position: relative;
-    top: 0;
-    right: 0;
 
-    background-color: rgb(255, 246, 235);
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
-*/
+
+.header{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.header-unpinned{
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%);
+}
+.header{
+    -webkit-transition: -webkit-transform 0.4s ease;
+    transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4 ease;
+    transition: 
+        transform 0.4s ease,
+        -webkit-transform 0.4s ease;
+}
 
 .top{
     padding: 0;
@@ -23,54 +39,6 @@ header{
     font-size: 16px;
     font-style: italic;
     font-family: 'Times New Roman';
-}
-
-.spacer{
-    position: relative;
-    height: 80vh;
-    display: grid;
-    place-items:  center;
-}
-
-.spacer::before{
-    content: "";
-    position: absolute;
-    height: 45%;
-    width: 1px;
-    background-color: black;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-.spacer::after{
-    content: "";
-    position: absolute;
-    height: 45%;
-    width: 1px;
-    background-color: black;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-.menu{
-    position: relative;
-    width: fit-content;
-    margin: 0 auto;
-}
-
-.test{
-    color: white;
-    background-color: #050505;
-    display: block;
-    text-align: center;
-
-    margin: 5px;
-    padding: 10px;
-    height: 280px;
 }
 
 /*ナビゲーションスタイリング　スタート*/
