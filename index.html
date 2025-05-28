@@ -21,9 +21,6 @@
     integrity="anonymous"
     defer></script>
     
-    <!-- JS呼び出し-->
-     <script src="./index.js" type="module"></script>
-
     <!--JQuery呼び出し-->
      <script src="https://code.jquery.com/jquery-3.7.1.js" 
      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
@@ -48,7 +45,7 @@
             </nav>
     </header>
     <main>
-        <canvas id="canvas-test" width="640" height="580"></canvas>
+        <canvas id="canvas-test" width="640" height="480"></canvas>
             
         <article>
             <div class="sub-title">
@@ -88,5 +85,9 @@
         
         <span><a href="#">TOP</a></span>
     </footer>
+    <!-- JS呼び出し-->
+     <!--HTMLが読まれてからJS起動するように-->
+     <script src="./index.js" type="module"></script>
+
 </body>
 </html>
