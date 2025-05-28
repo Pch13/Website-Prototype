@@ -18,8 +18,8 @@ main div{
 }
 
 .header-unpinned{
-    -webkit-transform: translateY(-150%);
-    transform: translateY(-150%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 .header{
     -webkit-transition: -webkit-transform 0.4s ease;
