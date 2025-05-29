@@ -19,7 +19,7 @@ $(function(){
 });
 */
 
-
+//ヘッダーアニメーション
 const onScroll = () => {
     console.log("scroll");
 };
