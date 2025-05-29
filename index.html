@@ -21,9 +21,6 @@
     integrity="anonymous"
     defer></script>
     
-    <!-- JS呼び出し-->
-     <script src="./index.js" type="module"></script>
-
     <!--JQuery呼び出し-->
      <script src="https://code.jquery.com/jquery-3.7.1.js" 
      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
@@ -34,28 +31,21 @@
 </head>    
 
 <body>
-    <header>
+    <header class="header" id="header">
         <div class="top">
             <h1>Product X:</h1>
         </div>
-            <div class="spacer">fadein</div>
-
-            <div class="menu" id="fadeIn">
-                <div class="test">TEST TEXT TEST TEXT TEST TEXT TEST TEXT TEST TEXT TEST TEXT</div>
-            </div>  
-                <nav>
-                    <ul>
-                        <li><a href="./index.html">HOME</a></li>
-                        <li><a href="">NEW</a></li>
-                        <li><a href="">CONTENT</a></li>
-                        <li><a href="./about.html">ABOUT</a></li>
-                    </ul>
-                </nav>
-
-            <div class="spacer">fadein</div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="">NEW</a></li>
+                    <li><a href="">CONTENT</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                </ul>
+            </nav>
     </header>
     <main>
-        <canvas id="canvas-test" width="640" height="180"></canvas>
+        <canvas id="canvas-test" width="640" height="480"></canvas>
             
         <article>
             <div class="sub-title">
@@ -95,5 +85,9 @@
         
         <span><a href="#">TOP</a></span>
     </footer>
+    <!-- JS呼び出し-->
+     <!--HTMLが読まれてからJS起動するように-->
+     <script src="./index.js" type="module"></script>
+
 </body>
 </html>
