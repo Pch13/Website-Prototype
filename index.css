@@ -18,6 +18,17 @@ header{
     z-index: +1;
 }
 
+header a{
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    transition: all .3s ease .3s;
+
+    color: #0c0c0c;
+}
+
 .header{
     position: fixed;
     top: 0;
@@ -44,16 +55,7 @@ header{
     transform: translateY(-52%);
 }
 
-header a{
-    text-decoration: none;
-}
-
 .top{
-    padding: 0;
-    margin: 0;
-
-    color: #0c0c0c;
-    text-align: center;
     font-weight: bold;
     font-size: 16px;
     font-style: italic;
@@ -61,27 +63,26 @@ header a{
 }
 
 
-/*ナビゲーションスタイリング　スタート*/
-nav{
+/*headerナビゲーションスタイリング　スタート*/
+header nav{
     margin: 25px;
     padding: 0;
     border-radius: 50px;
-    align-items: end;
+    align-items: center;
 
     text-align: center;
     z-index: -1;
     background-color:  rgb(236, 236, 236);
-
 }
 
 /*ブロックに対して*/
-nav ul{
+header nav ul{
     margin: 0;
     padding: 0;
 }
 
 /*ブロック内の行に対して*/
-nav ul li{
+header nav ul li{
     list-style-type: none;
     display: inline-block; /*横並びにする*/
     justify-content: center;
@@ -93,7 +94,7 @@ nav ul li{
 }
 
 /*行と行の要素を分けて指示する必要があるかは不明だがとりあえずわけて処理*/
-nav ul li a{
+header nav ul li a{
     text-decoration: none; /*aタグの下線（デフォルトでついてる）を消す*/
     text-align: center;
 
@@ -104,19 +105,72 @@ nav ul li a{
 }
 
 /*マウスホバーで動作*/
-nav ul li a:hover{
+header nav ul li a:hover{
     color: #C923DB;
     transition: .3s;
 }
 
-/*ナビゲーションスタイリング　おわり*/
+/*headerナビゲーションスタイリング　おわり*/
 
-article{
-    margin-left: 1.3em;
+
+/*in-Pageナビゲーションスタイリング*/
+article nav{
+    margin: .5em;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+    display: flex;
+
+    background-color: rgba(1, 0, 0, 0);
 }
-/*サブタイトル*/
+
+article nav ul{
+    margin: 0;
+    padding: 0;
+    display: block;
+    justify-content: flex-start;
+}
+
+article nav ul li{
+    list-style-type: none;
+    align-items: center;
+    text-align: center;
+    display: inline-flex;
+    border-radius: 50px;
+
+    padding: .7em;
+    padding-inline: 1em;
+    margin: .5em;
+    width: 9em;
+    background-color: #d0d0d0;
+    transform: scaleX(1) scaleY(1);
+    transition: transform background-color 3s ease;
+}
+
+article nav ul li a{
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    
+    font-size: 15px;
+    font-weight: 650;
+    color: #0c0c0c;
+    transition: color .3s ease;
+}
+
+article nav ul li:hover{
+    background-color: #79a9f0;
+    transform: scaleX(1.09) scaleY(1.09);
+}
+
+article nav ul li a:hover{
+    color: #f4f4f4;
+}
+
 .sub-title{
-    padding: 2px;
+    padding-top: 25em;
     font-size: 16px;
     font-weight: bold;
     color: #0c0c0c;
@@ -124,25 +178,79 @@ article{
     z-index: -1;
 }
 
+span{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    justify-content: flex-end;
+    text-align: center;
+    display: flex;
+}
+
+span a{
+    margin: 3em;
+    padding: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #d0d0d0;
+    border-radius: 50%;
+    border-bottom-right-radius: 12px;
+    height: 50px;
+    width: 50px;
+    left: -20px;
+    top: -20px;
+    background-color: #0c0c0c;
+    transition: color background-color .3s;
+}
+
+span a:hover{
+    background-color: #79a9f0;
+    color: #0c0c0c;
+    transition: background-color .3s ease-in-out;
+}
+
+.backToTop{
+    margin: 0;
+    padding: 0;
+
+    font-size: 15px;
+    font-weight: 650;
+}
+
+
 /*フッター*/
 footer{
+    position: relative;
     width: 100%;
-    height: 10vh;
-    border-radius: 50px 50px 0 0;
+    height: 40vh;
 
     background-color: rgb(236, 236, 236);
 }
 
-footer a{
+footer ul{
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li{
+    list-style-type: none;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+footer ul li a{
     text-decoration: none;
-    display: block;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 3px;
+    margin-bottom: 2px;
     padding: 0;
     text-align: center;
     
     font-weight: normal;
-
 }
 
 .stalker{

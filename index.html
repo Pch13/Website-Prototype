@@ -27,7 +27,7 @@
      crossorigin="anonymous"></script>
     
     <!--検索に引っかかるときのタイトル-->
-    <title>Pch's first website</title>
+    <title>Product X Special Website</title>
 </head>    
 
 <body>
@@ -44,47 +44,66 @@
                 </ul>
             </nav>
     </header>
-    <main>
-        <canvas id="canvas-test" width="640" height="480"></canvas>
-            
-        <article>
-            <div class="sub-title">
-            <h2>HOME</h2>
-            </div>
 
-            <ul>
-                <li><a href="./todo.html">TODOリスト</a></li>
-                <li><a href="./title-2">コンテンツ見出し</a></li>
-                <li><a href="./title-3">コンテンツ見出し</a></li>
-            </ul>
+    <main>  
+        <article id="content">
+            <div class="sub-title">
+                
+                <h2>HOME</h2></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">TODOリスト</a></li>
+                    <li><a href="./index.html">コンテンツ見出し</a></li>
+                    <li><a href="./index.html">コンテンツ見出し</a></li>
+                </ul>
+            </nav>
         </article>
 
         <article id="content">
             <div class="sub-title">
-            <h2>CONTENT-1</h2>
+                <a><h2>CONTENT-1</h2></a>
             </div>
-        
-            <h4>タイトル</h4>
-            <h4>タイトル</h4>
-            <h4>タイトル</h4>
+                <h4>タイトル</h4>
+                <h4>タイトル</h4>
+                <h4>タイトル</h4>
         </article>
         
-        <article id="about">
+        <article id="content">
             <div class="sub-title">
-            <h2>ABOUT</h2>
+                <a><h2>ABOUT</h2></a>
             </div>
-
-            <h4>見出し</h4>
-            <h4>見出し</h4>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">見出し</a></li>
+                    <li><a href="./index.html">見出し</a></li>
+                    
+                </ul>
+            </nav>  
         </article>
 
-        
-        <canvas id="canvas-test" width="640" height="150"></canvas>
+        <br>
+
+        <div class="backToTop" id="backToTop">
+            <span><a href="./index.html">TOP</a></span>
+        </div>
     </main>
+
     <footer>
-        
-        <span><a href="#">TOP</a></span>
+        <div class="footer">
+            <ul>
+                <li>
+                    <a href="">One</a>
+                    <a href="">Two</a>
+                    <a href="">Three</a>
+                    <a href="">One</a>
+                    <a href="">Two</a>
+                    <a href="">Three</a>
+                </li>
+            </ul>
+        </div>
     </footer>
+
     <!-- JS呼び出し-->
      <!--HTMLが読まれてからJS起動するように-->
      <script src="./index.js" type="module"></script>
