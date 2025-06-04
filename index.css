@@ -6,11 +6,12 @@ main div{
     color: #0c0c0c;
 }
 
+/*ヘッダー*/
 header{
     margin-top: 0;
     padding-bottom: 1.3em;
     width: 100%;
-    max-height: 18vh;
+    max-height: 16vh;
     align-items: start;
 
     background-color: #f4f4f4;
@@ -18,6 +19,18 @@ header{
     z-index: +1;
 }
 
+/*ヘッダーシャドウ*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    box-shadow: 1px 1px 15px .5px rgb(235, 235, 235); 
+               /*t/b l/r blur spread color inner shadow if needed*/
+}
+
+/*ヘッダー タイトル文字*/
 header a{
     padding: 0;
     margin: 0;
@@ -29,13 +42,11 @@ header a{
     color: #0c0c0c;
 }
 
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    box-shadow: 1px 1px 15px .5px rgb(235, 235, 235);
+.top{
+    font-weight: bold;
+    font-size: 14px;
+    font-style: italic;
+    font-family: 'Times New Roman';
 }
 
 .header{
@@ -55,14 +66,6 @@ header a{
     transform: translateY(-52%);
 }
 
-.top{
-    font-weight: bold;
-    font-size: 16px;
-    font-style: italic;
-    font-family: 'Times New Roman';
-}
-
-
 /*headerナビゲーションスタイリング　スタート*/
 header nav{
     margin: 25px;
@@ -72,7 +75,7 @@ header nav{
 
     text-align: center;
     z-index: -1;
-    background-color:  rgb(236, 236, 236);
+    /*background-color:  rgb(236, 236, 236);*/
 }
 
 /*ブロックに対して*/
@@ -84,13 +87,13 @@ header nav ul{
 /*ブロック内の行に対して*/
 header nav ul li{
     list-style-type: none;
-    display: inline-block; /*横並びにする*/
+    display: inline-block; 
     justify-content: center;
     align-items: center;
 
-    padding: .5px;
+    padding: 1px;
 	margin: .7em;
-    width: 15%; /*タイトルの間隔をきめる*/
+    width: 15%; 
 }
 
 /*行と行の要素を分けて指示する必要があるかは不明だがとりあえずわけて処理*/
@@ -99,8 +102,8 @@ header nav ul li a{
     text-align: center;
 
     color: #0c0c0c;
-    font-size: 18px;
-    font-weight: 570;
+    font-size: 14px;
+    font-weight: 500;
     transition: all .3s ease .1s;
 }
 
@@ -111,7 +114,6 @@ header nav ul li a:hover{
 }
 
 /*headerナビゲーションスタイリング　おわり*/
-
 
 /*in-Pageナビゲーションスタイリング*/
 article nav{
@@ -142,7 +144,7 @@ article nav ul li{
     padding-inline: 1em;
     margin: .5em;
     width: 9em;
-    background-color: #d0d0d0;
+    background-color: rgb(236, 236, 236);
     transform: scaleX(1) scaleY(1);
     transition: transform background-color 3s ease;
 }
@@ -170,12 +172,57 @@ article nav ul li a:hover{
 }
 
 .sub-title{
+    display: block; /*一旦、aritcle外にだして窓枠とバッティングしないように*/
     padding-top: 25em;
     font-size: 16px;
     font-weight: bold;
     color: #0c0c0c;
 
     z-index: -1;
+}
+
+/*まどわくテスト*/
+
+#content-test{
+    margin: 0;
+    padding: 0;
+    flex: 1 .5 50%; /*flex: flex-grow(拡大率) flex-shrink(縮小率) flex-basis(基本幅)*/
+    border: #0c0c0c solid 2px;
+}
+#content-test a{
+    padding-left: 1.5em;
+    text-decoration: none; /*下線とる*/
+    color: #0c0c0c;
+    font-weight: 500;
+}
+
+.box1{ /*大枠をつくる*/
+    margin: 1em;
+    padding: 2em;
+    display: inline-flex;
+    align-items: flex-end;
+
+    background-color: #0c0c0c;
+    height: 390px;
+    width: 370px;
+}
+
+.inner-Box{ /*ミニ枠をつくる*/
+    margin: 0 auto;
+    padding: 1em;
+    width: 300px;
+    display: inline-flex;
+    align-items: inline-end;
+
+    background-color: #f4f4f4;
+    border-radius: 50px;
+    transform: scaleX(1) scaleY(1);
+    transition: background-color .3s ease-out;
+}
+
+.inner-Box:hover{
+    transform: scaleX(1.1) scaleY(1.1);
+    background-color: #79a9f0;
 }
 
 span{
@@ -253,6 +300,7 @@ footer ul li a{
     font-weight: normal;
 }
 
+/*マウス追従スタイル*/
 .stalker{
     background-color: #151515;
     border-radius: 50%;
