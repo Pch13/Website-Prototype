@@ -165,9 +165,6 @@ article nav ul li a{
 article nav ul li:hover{
     background-color: #79a9f0;
     transform: scaleX(1.09) scaleY(1.09);
-}
-
-article nav ul li a:hover{
     color: #f4f4f4;
 }
 
@@ -189,12 +186,6 @@ article nav ul li a:hover{
     flex: 1 .5 50%; /*flex: flex-grow(拡大率) flex-shrink(縮小率) flex-basis(基本幅)*/
     border: #0c0c0c solid 2px;
 }
-#content-test a{
-    padding-left: 1.5em;
-    text-decoration: none; /*下線とる*/
-    color: #0c0c0c;
-    font-weight: 500;
-}
 
 .box1{ /*大枠をつくる*/
     margin: 1em;
@@ -207,22 +198,27 @@ article nav ul li a:hover{
     width: 370px;
 }
 
-.inner-Box{ /*ミニ枠をつくる*/
-    margin: 0 auto;
+.inner-Box a{ /*ミニ枠をつくる*/
+    text-decoration: none; /*下線とる*/
     padding: 1em;
-    width: 300px;
+    padding-left: 1.5em;
+    margin: 0 auto;
     display: inline-flex;
     align-items: inline-end;
-
-    background-color: #f4f4f4;
+    width: 300px;
     border-radius: 50px;
+
+    color: #0c0c0c;
+    background-color: #f4f4f4;
+    font-weight: 500;
     transform: scaleX(1) scaleY(1);
-    transition: background-color .3s ease-out;
+    transition: all .3s ease .0s;
 }
 
-.inner-Box:hover{
-    transform: scaleX(1.1) scaleY(1.1);
+.inner-Box a:hover{
+    transform: scaleX(1.05) scaleY(1.05);
     background-color: #79a9f0;
+    color: #f4f4f4;
 }
 
 span{
