@@ -1,3 +1,12 @@
+/*PCファーストメディアクエリ*/
+@media screen and(max-width: 959px) {
+    /*ここにPC表示の記述*/
+}
+@media screen and(max-width: 480px) {
+    /*ここにタブレット表示の記述*/
+} 
+
+
 body{
     background-color: #f4f4f4;
 }
@@ -104,13 +113,13 @@ header nav ul li a{
     color: #0c0c0c;
     font-size: 14px;
     font-weight: 500;
+    transform: scale(1,1);
     transition: all .3s ease .1s;
 }
 
 /*マウスホバーで動作*/
 header nav ul li a:hover{
-    color: #C923DB;
-    transition: .3s;
+    transform: scale(1.2,1.2);
 }
 
 /*headerナビゲーションスタイリング　おわり*/
@@ -183,16 +192,22 @@ article nav ul li:hover{
 #content-test{
     margin: 0;
     padding: 0;
-    flex: 1 .5 50%; /*flex: flex-grow(拡大率) flex-shrink(縮小率) flex-basis(基本幅)*/
-    border: #0c0c0c solid 2px;
+    display: flex;
+    flex: 1 .5 70%; /*flex: flex-grow(拡大率) flex-shrink(縮小率) flex-basis(基本幅)*/
+    align-items: center;
+    justify-content: center;
+
+    /*border: #0c0c0c solid 2px;*/
 }
 
 .box1{ /*大枠をつくる*/
-    margin: 1em;
+    margin: 1.5em;
     padding: 2em;
     display: inline-flex;
     align-items: flex-end;
-
+    justify-content: center;
+    flex: 1 .5 50%;
+    
     background-color: #0c0c0c;
     height: 390px;
     width: 370px;
@@ -204,96 +219,141 @@ article nav ul li:hover{
     padding-left: 1.5em;
     margin: 0 auto;
     display: inline-flex;
-    align-items: inline-end;
+    align-items: flex-end;
     width: 300px;
     border-radius: 50px;
+    flex-wrap: wrap;
+    flex: 1 .3 50%;
 
     color: #0c0c0c;
     background-color: #f4f4f4;
     font-weight: 500;
     transform: scaleX(1) scaleY(1);
-    transition: all .3s ease .0s;
+    transition: all .1s ease .0s;
 }
 
 .inner-Box a:hover{
-    transform: scaleX(1.05) scaleY(1.05);
-    background-color: #79a9f0;
+    transform: scaleX(1.02) scaleY(1.02);
+    background-color: #828282;
     color: #f4f4f4;
 }
 
-span{
+/*トップに戻る挙動　ボックスと中身をbefore afterで管理したらいけそう*/
+.arrow-up{
     margin: 0;
     padding: 0;
-    padding-bottom: 30px;
-    justify-content: flex-end;
-    text-align: center;
     display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-span a{
-    margin: 3em;
-    padding: 6px;
-    text-decoration: none;
+.arrow-up div{
+    margin: 1em;
+    padding: 1em;
     display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.arrow-up div a{
+    margin: 1em;
+    padding: 6px;
+    display: inline-flex;
+    text-decoration: none;
     align-items: center;
     justify-content: center;
-
-    color: #d0d0d0;
+    
+    background-color: #0c0c0c;
     border-radius: 50%;
-    border-bottom-right-radius: 12px;
     height: 50px;
     width: 50px;
     left: -20px;
     top: -20px;
-    background-color: #0c0c0c;
-    transition: color background-color .3s;
+    transform: scale(1);
+    transition: all .2s ease-in-out .1s;
 }
 
-span a:hover{
-    background-color: #79a9f0;
-    color: #0c0c0c;
-    transition: background-color .3s ease-in-out;
+.arrow-up div a::before{ /*やじるし作成*/
+    content: "";
+    margin: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    top: 0;
+    bottom: 0;
+    left: 2px;
+    width: 13px;
+    height: 13px;
+    border-top: #f4f4f4 solid 2px;
+    border-right: #f4f4f4 solid 2px;
+    opacity: 1;
+    transform: rotate(-45deg) scale(1);
+    transition: all .2s ease;
 }
 
-.backToTop{
-    margin: 0;
-    padding: 0;
-
-    font-size: 15px;
-    font-weight: 650;
+.arrow-up div a:hover{
+    transform: scale(1.05);
+    opacity: 0.2;
 }
-
 
 /*フッター*/
 footer{
     position: relative;
     width: 100%;
-    height: 40vh;
+    height: 46vh;
 
-    background-color: rgb(236, 236, 236);
+    background-color: #0c0c0c;
 }
 
 footer ul{
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 footer ul li{
+    margin: .5em;
+    padding: 1em;
     list-style-type: none;
-    display: inline-block;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
 
-    width: 100%;
+    width: 100%; /*全体の幅を指定*/
 }
 footer ul li a{
     text-decoration: none;
-    margin-top: 3px;
-    margin-bottom: 2px;
-    padding: 0;
+    margin-top: 2em;
+    padding: 0 auto;
+    justify-content: space-between;
     text-align: center;
+    width: 50%; /*折り返しの幅を指定*/
     
+    color: #f4f4f4;
     font-weight: normal;
+    font-size: 16px;
+    transition: all .2s ease .2s;
+}
+
+footer ul li a:hover{
+    font-weight: 900;
+}
+
+footer span a{
+    margin: .5em;
+    padding-top: 7.5em;
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: start;
+
+    color: #f4f4f4;
+    font-weight: normal;
+    font-size: 10px;
 }
 
 /*マウス追従スタイル*/
